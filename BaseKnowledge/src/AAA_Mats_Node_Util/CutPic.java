@@ -25,6 +25,7 @@ public class CutPic {
 		}
 		rectangle = new Rectangle(176, 329, 446, 43);
 		cutStream(new File("/home/makun/Ocr-1.png"),"/home/makun/dest.png","png",rectangle );
+		System.out.println("abc");
 	}
 	
 	private static void cutStream(File capturedFile, String destPath, String suffix, Rectangle rectangle) throws Exception {

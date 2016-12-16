@@ -19,13 +19,13 @@ public class CopyDebugTool {
 		String deFileName = split[split.length - 1];
 		System.out.println("copied file:------>" + deFileName);
 		FileInputStream resFile = new FileInputStream(new File(srcFile));
-		FileOutputStream destFile = new FileOutputStream(new File("/media/makun/KINGSTON/" + deFileName));
+		FileOutputStream destFile = new FileOutputStream(new File("/media/makun/MAKUN/" + deFileName));
 		byte[] buf = new byte[1024];
 		while (resFile.read(buf) != -1) {
 			int len = buf.length;
 			destFile.write(buf, 0, len);
 			destFile.flush();
-		};
+		}
 		destFile.close();
 		resFile.close();
 	}
