@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+           http://www.springframework.org/schema/aop 
+           http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+	<bean id="salaryManager" class="com.makun.SalaryManager"></bean>   
+	<bean id="log" class="com.makun.Logging"></bean>
+	<bean id="security" class="com.makun.Security"></bean>
+	<bean id="privilege" class="com.makun.Privilege"></bean>
+	
+	<aop:config proxy-target-class="true">
+	    <aop:pointcut expression="execution(* com.makun.SalaryManager.*(..))" id="perform"/>
+	    <aop:aspect ref="log">
+	        <aop:before method="log" pointcut-ref="perform"/>
+	    </aop:aspect>
+	    <aop:aspect ref="security">
+	        <aop:before method="security" pointcut-ref="perform"/>
+	    </aop:aspect>
+	    <aop:aspect ref="privilege">
+	        <aop:around method="determine" pointcut-ref="perform"/>
+	    </aop:aspect>
+	</aop:config>
+    	
+</beans>
