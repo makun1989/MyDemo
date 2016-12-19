@@ -16,7 +16,7 @@ public class CopyToDeskUtil {
 		String deFileName=split[split.length-1];
 		System.out.println("copied file:------>"+deFileName);
 		FileInputStream resFile=new FileInputStream(new File(srcFile));
-		FileOutputStream destFile=new FileOutputStream(new File("/media/makun/MAKUN/"+deFileName));
+		FileOutputStream destFile=new FileOutputStream(new File("/media/makun/WU/"+deFileName));
 		byte[] buf=new byte[1024];
 		while(resFile.read(buf)!=-1){
 			int len=buf.length;
