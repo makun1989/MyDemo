@@ -1,4 +1,4 @@
-package com.makun;
+package com.makun.demo;
 
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;

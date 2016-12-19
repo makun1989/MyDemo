@@ -1,4 +1,4 @@
-package com.makun;
+package com.makun.demo;
 
 public class Security {
 	public void security(){

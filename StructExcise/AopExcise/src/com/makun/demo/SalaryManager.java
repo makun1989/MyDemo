@@ -1,4 +1,4 @@
-package com.makun;
+package com.makun.demo;
 
 public class SalaryManager {
 	public void showSalary(){

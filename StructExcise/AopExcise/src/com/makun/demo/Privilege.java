@@ -1,4 +1,4 @@
-package com.makun;
+package com.makun.demo;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 
