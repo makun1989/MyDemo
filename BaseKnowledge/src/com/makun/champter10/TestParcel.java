@@ -1,0 +1,15 @@
+package com.makun.champter10;
+
+import org.junit.Test;
+
+import com.makun.champter10.interfaceDe.Contents;
+import com.makun.champter10.interfaceDe.Destination;
+
+public class TestParcel {
+	@Test
+	public void test(){
+		Parcel4 p=new Parcel4();
+		Contents c=p.contents();
+		Destination d=p.destination("China;");
+	}
+}
