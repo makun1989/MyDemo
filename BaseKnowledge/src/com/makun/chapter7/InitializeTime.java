@@ -1,4 +1,4 @@
-package com.makun.champter7;
+package com.makun.chapter7;
 
 public class InitializeTime {
 	private String str;

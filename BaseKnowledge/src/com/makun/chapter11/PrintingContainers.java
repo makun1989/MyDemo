@@ -1,4 +1,4 @@
-package com.makun.champter11;
+package com.makun.chapter11;
 
 import java.util.ArrayList;
 import java.util.Collection;

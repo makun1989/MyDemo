@@ -1,4 +1,4 @@
-package com.makun.champter10;
+package com.makun.chapter10;
 
 public abstract class Event {
 	private long eventTime;

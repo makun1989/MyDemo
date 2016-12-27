@@ -1,4 +1,4 @@
-package com.makun.champter10.interfaceDe;
+package com.makun.chapter10.interfaceDe;
 
 public interface Contents {
 	int value();

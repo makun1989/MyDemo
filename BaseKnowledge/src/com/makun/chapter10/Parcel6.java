@@ -1,6 +1,6 @@
-package com.makun.champter10;
+package com.makun.chapter10;
 
-import com.makun.champter10.interfaceDe.Contents;
+import com.makun.chapter10.interfaceDe.Contents;
 
 public class Parcel6 {
 	//这个例子列举了一个定义在方法中的内部类.

@@ -3,7 +3,7 @@ package com.makun;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.makun.champter10.Event;
+import com.makun.chapter10.Event;
 
 public class Controller {
 	private List<Event> eventList=new ArrayList<Event>();

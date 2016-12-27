@@ -1,7 +1,7 @@
-package com.makun.champter10;
+package com.makun.chapter10;
 
-import com.makun.champter10.interfaceDe.Contents;
-import com.makun.champter10.interfaceDe.Destination;
+import com.makun.chapter10.interfaceDe.Contents;
+import com.makun.chapter10.interfaceDe.Destination;
 
 public class Parcel4 {
 	private class PContents implements Contents {

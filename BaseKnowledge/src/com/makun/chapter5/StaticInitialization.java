@@ -1,4 +1,4 @@
-package com.makun.champter5;
+package com.makun.chapter5;
 
 public class StaticInitialization {
 	public static void main(String[] args) {

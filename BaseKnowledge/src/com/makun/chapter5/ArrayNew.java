@@ -1,4 +1,4 @@
-package com.makun.champter5;
+package com.makun.chapter5;
 
 import java.util.Arrays;
 import java.util.Random;

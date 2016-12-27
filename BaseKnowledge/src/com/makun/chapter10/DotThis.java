@@ -1,4 +1,4 @@
-package com.makun.champter10;
+package com.makun.chapter10;
 
 public class DotThis {
 	private String str;

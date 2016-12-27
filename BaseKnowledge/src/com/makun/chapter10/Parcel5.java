@@ -1,6 +1,6 @@
-package com.makun.champter10;
+package com.makun.chapter10;
 
-import com.makun.champter10.interfaceDe.Destination;
+import com.makun.chapter10.interfaceDe.Destination;
 
 public class Parcel5 {
 	//演示定义在方法内部的内部类.
