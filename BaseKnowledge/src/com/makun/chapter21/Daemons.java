@@ -1,9 +1,11 @@
 package com.makun.chapter21;
 
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.Lock;
 
 public class Daemons {
 	public static void main(String[] args) throws InterruptedException {
+		Lock lock;
 		Thread d=new Thread(new Daemon());
 		d.setDaemon(true);
 		d.start();

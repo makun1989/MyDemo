@@ -8,6 +8,7 @@ import java.io.OutputStream;
 
 public class Test {
 	public static void main(String[] args)throws Exception {
+		System.out.println(System.getProperty("user.dir"));
 		File file =new File("/home/makun/Ocr-1.png");
 		File destFile=new File("/home/makun/test.png");
 		byte[] buf=new byte[10];

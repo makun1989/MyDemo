@@ -6,5 +6,6 @@
 	<classpathentry kind="lib" path="libs/slf4j-api-1.7.5.jar"/>
 	<classpathentry kind="lib" path="libs/slf4j-log4j12-1.7.5.jar"/>
 	<classpathentry kind="lib" path="libs/slf4j-1.7.21.zip"/>
+	<classpathentry kind="lib" path="libs/SignatureCreator.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
