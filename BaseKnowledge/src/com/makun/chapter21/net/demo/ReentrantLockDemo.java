@@ -1,6 +1,7 @@
 package com.makun.chapter21.net.demo;
 
 import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.Executors;
 import java.util.concurrent.locks.ReentrantLock;
 
 import org.junit.Test;
@@ -11,6 +12,8 @@ public class ReentrantLockDemo {
 	public void demoLock() {
 		final int loopcount = 10000;
 		int threadcount = 10;
+		
+		Executors.newFixedThreadPool(3);
 
 		final SafeSeqWithLock seq = new SafeSeqWithLock();
 
@@ -23,9 +26,7 @@ public class ReentrantLockDemo {
 				@Override
 				public void run() {
 					for (int j = 0; j < loopcount; ++j) {
-
 						seq.inc();
-
 					}
 
 					System.out.println("finished : " + index);
