@@ -53,13 +53,14 @@ public class ComputerInfo {
 			StringBuffer sb = new StringBuffer(); // 存放多个网卡地址用，目前只取一个非0000000000E0隧道的值
 			try {
 				List<String> macList = getMacAddressList();
-				for (Iterator<String> iter = macList.iterator(); iter.hasNext();) {
-					String amac = iter.next();
-					if (!amac.equals("0000000000E0")) {
-						sb.append(amac);
-						break;
-					}
-				}
+//				for (Iterator<String> iter = macList.iterator(); iter.hasNext();) {
+//					String amac = iter.next();
+////					if (!amac.equals("0000000000E0")) {
+//						sb.append(amac);
+//						break;
+////					}
+//				}
+				sb.append(macList.iterator().next());
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
