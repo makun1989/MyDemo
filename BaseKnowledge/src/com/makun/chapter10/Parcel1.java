@@ -1,5 +1,8 @@
 package com.makun.chapter10;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+
 public class Parcel1 {
 	class Contents {
 		private int i = 11;
@@ -11,9 +14,12 @@ public class Parcel1 {
 
 	class Destination {
 
-		private String label;
+		private  String label;
 
 		public Destination(String whereTo) {
+			new ArrayList();
+			new LinkedList();
+			
 			label = whereTo;
 		}
 
@@ -34,3 +40,4 @@ public class Parcel1 {
 	}
 
 }
+

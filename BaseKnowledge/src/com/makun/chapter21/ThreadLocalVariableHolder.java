@@ -6,30 +6,23 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 public class ThreadLocalVariableHolder {
-	private static ThreadLocal<Integer> value=new ThreadLocal<Integer>(){
-		Random rand=new Random();
-		protected synchronized Integer initialValue() {
-			return rand.nextInt(500);
+	static ThreadLocal<Integer> value=new ThreadLocal<Integer>(){
+		protected Integer initialValue() {
+			return new Random().nextInt(10);
 		};
 	};
-	
-
-	public static void increment() {
+	public static void increment(){
 		value.set(value.get()+1);
 	}
-	
-	public static int get(){
+	public static Integer get(){
 		return value.get();
 	}
-	
-	
 	public static void main(String[] args) throws InterruptedException {
 		ExecutorService exec=Executors.newCachedThreadPool();
-		for(int i=0;i<6;i++){
-			exec.execute(new Accessors(i));
+		for(int i=0;i<3;i++){
+			exec.submit(new Accessors(i));
 		}
-		TimeUnit.SECONDS.sleep(3);
-		
+		Thread.sleep(4);
 		exec.shutdownNow();
 	}
 
@@ -37,21 +30,16 @@ public class ThreadLocalVariableHolder {
 
 class Accessors implements Runnable{
 	private final int id;
-	public Accessors(int ids){
-		id=ids;
+	public Accessors(int id){
+		this.id=id;
 	}
 	@Override
 	public void run() {
 		while(!Thread.currentThread().isInterrupted()){
 			ThreadLocalVariableHolder.increment();
-			System.out.println(this);
+			System.out.println(Thread.currentThread().getName()+" : "+ThreadLocalVariableHolder.get());
 			Thread.yield();
 		}
-	}
-	
-	@Override
-	public String toString() {
-		return "#"+id+";"+ThreadLocalVariableHolder.get();
 	}
 	
 	
